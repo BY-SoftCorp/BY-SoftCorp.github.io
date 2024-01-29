@@ -1,0 +1,22 @@
+version: "3"
+services:
+  tech-blog:
+    container_name: tech-blog
+#    image: bretfisher/jekyll-serve
+    image: jekyll/jekyll
+    restart: always
+    build: .
+    networks:
+      - main-net
+    ports:
+      - "4000:4000"
+    expose:
+      - "4000"
+    command: jekyll serve --host 0.0.0.0
+
+networks:
+  main-net:
+    external: true
+
+#    tech-blog
+#docker run --rm -p 4000:4000 -v $(pwd):/site bretfisher/jekyll-serve
