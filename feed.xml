@@ -4,7 +4,7 @@
   <id>https://blog.by-softcorp.com/</id>
   <title>BY Soft Tech Insights</title>
   <subtitle>BY-Soft의 기술 블로그는 코드의 힘을 통해 미래를 만들어가는 여정에서 우리가 직면한 도전과 성공의 순간들을 공유합니다. 여기에서는 현실 세계의 다양한 개발 과제들에 대한 해결책과 우리만의 기술적인 접근법을 자세하게 살펴볼 수 있습니다. 우리는 지식을 공유하고 협업을 통해 더 나은 개발자, 더 혁신적인 솔루션을 만들어가는 과정을 여러분과 함께 나누고자 합니다.</subtitle>
-  <updated>2024-01-29T15:30:10+09:00</updated>
+  <updated>2024-02-02T11:15:56+09:00</updated>
   <author>
     <name>BY-Soft</name>
     <uri>https://blog.by-softcorp.com/</uri>
@@ -17,6 +17,153 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>FastAPI와 SQLAlchemy 환경에서 Database Test</title>
+    <link href="https://blog.by-softcorp.com/posts/fast-api-db-test/" rel="alternate" type="text/html" title="FastAPI와 SQLAlchemy 환경에서 Database Test" />
+    <published>2022-06-26T15:32:00+09:00</published>
+  
+    <updated>2022-06-26T15:32:00+09:00</updated>
+  
+    <id>https://blog.by-softcorp.com/posts/fast-api-db-test/</id>
+    <content src="https://blog.by-softcorp.com/posts/fast-api-db-test/" />
+    <author>
+      <name>alex.kim</name>
+    </author>
+
+  
+    
+    <category term="python" />
+    
+    <category term="backend" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      FIRST 원칙
+
+단위 테스트를 수행하는 데 있어 여러 가지 가이드가 있지만 일반적으로 적용하고 있는 FIRST 원칙은 다음과 같습니다.
+
+
+  Fast
+  Independent
+  Repeatable
+  Self-Validating
+  Timely
+
+
+하지만 22년 6월 기준 FastAPI와 SQLAlchemy에서 제공하는 공식문서상의 튜토리얼을 따라가면 2번째 항목인 Independent를 만족하지 못하는 현상이 발생합니다. 이는 매우 안타까운 상황이며, 많은 기술 블로그를 보아도 위와 같은 상황으로 고민하는 개발자들을 만나볼 수 있죠.
+이 포스팅은 이런 문제에 대해 다른 Unit-Test lib에서와 같이 독립성을 보장하는 데이터베이스 환경을 구성하는 방향으로 잡아보았습니다.
+
+Database E...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Python 열거형과 SQLAlchemy</title>
+    <link href="https://blog.by-softcorp.com/posts/annotated-enum/" rel="alternate" type="text/html" title="Python 열거형과 SQLAlchemy" />
+    <published>2022-05-15T09:00:00+09:00</published>
+  
+    <updated>2022-05-15T09:00:00+09:00</updated>
+  
+    <id>https://blog.by-softcorp.com/posts/annotated-enum/</id>
+    <content src="https://blog.by-softcorp.com/posts/annotated-enum/" />
+    <author>
+      <name>alex.kim</name>
+    </author>
+
+  
+    
+    <category term="python" />
+    
+    <category term="structure" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Python의 Enum Type
+
+기본적으로 Python의 열거형은 여러 이름을 같은 값에 대해 별칭으로 사용합니다.
+예를 들면 열거형의 멤버에 동일한 값을 가진 A와 B가 정의되어 있다면 B는 A의 별칭입니다.
+
+class Shape(Enum):
+    SQUARE = 2
+    DIAMOND = 1
+    CIRCLE = 3
+    ALIAS_FOR_SQUARE = 2
+
+
+위 Shape를 예로 들어보면 ALIAS_FOR_SQUARE는 SQUARE의 별칭으로 SQUARE, ALIAS_FOR_SQUARE 중 어느 것을 조회해도 2(SQUARE)를 반환하게 됩니다.
+
+&amp;gt;&amp;gt;&amp;gt; Shape.SQUARE
+&amp;lt;Shape.SQUARE: 2&amp;gt;
+&amp;gt;&amp;gt;&amp;gt; Shape.ALIAS_FO...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>FastAPI 유효성 검사</title>
+    <link href="https://blog.by-softcorp.com/posts/fast-api-validator/" rel="alternate" type="text/html" title="FastAPI 유효성 검사" />
+    <published>2022-04-25T09:00:00+09:00</published>
+  
+    <updated>2022-04-25T09:00:00+09:00</updated>
+  
+    <id>https://blog.by-softcorp.com/posts/fast-api-validator/</id>
+    <content src="https://blog.by-softcorp.com/posts/fast-api-validator/" />
+    <author>
+      <name>alex.kim</name>
+    </author>
+
+  
+    
+    <category term="python" />
+    
+    <category term="backend" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Request Body Validate
+
+API 요청을 받으면 최소한으로 수행해야 하는 유효성 검사가 있습니다. 보안의 가장 기본인 SQL Injection 공격 이외에도 전달받은 데이터가 필요로 하는 최소한의 규칙 등이 있습니다.
+password를 예로 들자면 대소문자, 숫자, 특수문자를 포함해 최소 8에서 최대 20자리까지의 텍스트를 만족한다던가 혹은 전화번호는 숫자와 +- 등으로만 구성이 되어있는지 판단할 경우가 생기기 마련이죠.
+FastAPI 에서는 pydantic 이라는 Opensource 를 통해서 검증할 수가 있습니다.
+
+BaseModel
+
+pydantic 에서 제공하는 BaseModel과 Field를 이용하면 기본적인 유효성 검증을 손쉽게 처리할 수 있으며, 직접 유효성 검증을 하는 코드...
+    </summary>
+  
+
+  </entry>
 
 </feed>
 
