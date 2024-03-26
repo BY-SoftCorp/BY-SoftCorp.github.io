@@ -4,7 +4,7 @@
   <id>https://blog.by-softcorp.com/</id>
   <title>BY Soft Tech Insights</title>
   <subtitle>BY-Soft의 기술 블로그는 코드의 힘을 통해 미래를 만들어가는 여정에서 우리가 직면한 도전과 성공의 순간들을 공유합니다. 여기에서는 현실 세계의 다양한 개발 과제들에 대한 해결책과 우리만의 기술적인 접근법을 자세하게 살펴볼 수 있습니다. 우리는 지식을 공유하고 협업을 통해 더 나은 개발자, 더 혁신적인 솔루션을 만들어가는 과정을 여러분과 함께 나누고자 합니다.</subtitle>
-  <updated>2024-02-02T11:15:56+09:00</updated>
+  <updated>2024-03-26T11:16:56+09:00</updated>
   <author>
     <name>BY-Soft</name>
     <uri>https://blog.by-softcorp.com/</uri>
@@ -17,6 +17,50 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>신입 프론트엔드 개발자의 MVVM 패턴 적용기</title>
+    <link href="https://blog.by-softcorp.com/posts/apply-mvvm-design/" rel="alternate" type="text/html" title="신입 프론트엔드 개발자의 MVVM 패턴 적용기" />
+    <published>2024-03-26T10:47:00+09:00</published>
+  
+    <updated>2024-03-26T10:47:00+09:00</updated>
+  
+    <id>https://blog.by-softcorp.com/posts/apply-mvvm-design/</id>
+    <content src="https://blog.by-softcorp.com/posts/apply-mvvm-design/" />
+    <author>
+      <name>jessie.han</name>
+    </author>
+
+  
+    
+    <category term="typescript" />
+    
+    <category term="react" />
+    
+    <category term="frontend" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      신입 프론트엔드 개발자의 MVVM 패턴 적용기
+
+MVVM 패턴은 디자인 패턴의 한 종류로, Model, View, ViewModel을 사용해 UI 관련 로직과 비즈니스 로직을 명확하게 분리합니다. 취업을 준비하던 시기에 진행했던 토이 프로젝트는 규모가 작아 이러한 패턴을 적용할 필요성을 느끼지 못했습니다. 그러나 프론트엔드 개발자로 일을 시작하고 사용자들이 사용할 실제 서비스를 제작하며, 코드의 유지보수성과 재사용성을 높이기 위해 MVVM 패턴을 적용해보는게 좋을것 같다는 코드리뷰 피드백을 받게 되었습니다. 신입 프론트엔드 개발자로써 한번도 써보지 않았던 MVVM 패턴을 어떻게 코드에 적용했는지, 또 리팩토링을 진행하며 어떤 부분을 고민했었는지 글을 통해 나눠보고자 합니다.
+
+리팩토링 과정
+
+초기 코드...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
