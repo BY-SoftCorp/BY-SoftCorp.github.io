@@ -33,8 +33,8 @@
 <meta property="og:title" content="신입 프론트엔드 개발자의 MVVM 패턴 적용기" />
 <meta name="author" content="한 재연" />
 <meta property="og:locale" content="ko_KR" />
-<meta name="description" content="신입 프론트엔드 개발자의 MVVM 패턴 적용기" />
-<meta property="og:description" content="신입 프론트엔드 개발자의 MVVM 패턴 적용기" />
+<meta name="description" content="MVVM 패턴은 디자인 패턴의 한 종류로, Model, View, ViewModel을 사용해 UI 관련 로직과 비즈니스 로직을 명확하게 분리합니다. 취업을 준비하던 시기에 진행했던 토이 프로젝트는 규모가 작아 이러한 패턴을 적용할 필요성을 느끼지 못했습니다. 그러나 프론트엔드 개발자로 일을 시작하고 사용자들이 사용할 실제 서비스를 제작하며, 코드의 유지보수성과 재사용성을 높이기 위해 MVVM 패턴을 적용해보는게 좋을것 같다는 코드리뷰 피드백을 받게 되었습니다. 신입 프론트엔드 개발자로써 한번도 써보지 않았던 MVVM 패턴을 어떻게 코드에 적용했는지, 또 리팩토링을 진행하며 어떤 부분을 고민했었는지 글을 통해 나눠보고자 합니다." />
+<meta property="og:description" content="MVVM 패턴은 디자인 패턴의 한 종류로, Model, View, ViewModel을 사용해 UI 관련 로직과 비즈니스 로직을 명확하게 분리합니다. 취업을 준비하던 시기에 진행했던 토이 프로젝트는 규모가 작아 이러한 패턴을 적용할 필요성을 느끼지 못했습니다. 그러나 프론트엔드 개발자로 일을 시작하고 사용자들이 사용할 실제 서비스를 제작하며, 코드의 유지보수성과 재사용성을 높이기 위해 MVVM 패턴을 적용해보는게 좋을것 같다는 코드리뷰 피드백을 받게 되었습니다. 신입 프론트엔드 개발자로써 한번도 써보지 않았던 MVVM 패턴을 어떻게 코드에 적용했는지, 또 리팩토링을 진행하며 어떤 부분을 고민했었는지 글을 통해 나눠보고자 합니다." />
 <link rel="canonical" href="https://blog.by-softcorp.com/posts/apply-mvvm-design/" />
 <meta property="og:url" content="https://blog.by-softcorp.com/posts/apply-mvvm-design/" />
 <meta property="og:site_name" content="BY Soft Tech Insights" />
@@ -43,7 +43,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="신입 프론트엔드 개발자의 MVVM 패턴 적용기" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"한 재연"},"dateModified":"2024-03-26T10:47:00+09:00","datePublished":"2024-03-26T10:47:00+09:00","description":"신입 프론트엔드 개발자의 MVVM 패턴 적용기","headline":"신입 프론트엔드 개발자의 MVVM 패턴 적용기","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.by-softcorp.com/posts/apply-mvvm-design/"},"url":"https://blog.by-softcorp.com/posts/apply-mvvm-design/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"한 재연"},"dateModified":"2024-03-26T10:47:00+09:00","datePublished":"2024-03-26T10:47:00+09:00","description":"MVVM 패턴은 디자인 패턴의 한 종류로, Model, View, ViewModel을 사용해 UI 관련 로직과 비즈니스 로직을 명확하게 분리합니다. 취업을 준비하던 시기에 진행했던 토이 프로젝트는 규모가 작아 이러한 패턴을 적용할 필요성을 느끼지 못했습니다. 그러나 프론트엔드 개발자로 일을 시작하고 사용자들이 사용할 실제 서비스를 제작하며, 코드의 유지보수성과 재사용성을 높이기 위해 MVVM 패턴을 적용해보는게 좋을것 같다는 코드리뷰 피드백을 받게 되었습니다. 신입 프론트엔드 개발자로써 한번도 써보지 않았던 MVVM 패턴을 어떻게 코드에 적용했는지, 또 리팩토링을 진행하며 어떤 부분을 고민했었는지 글을 통해 나눠보고자 합니다.","headline":"신입 프론트엔드 개발자의 MVVM 패턴 적용기","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.by-softcorp.com/posts/apply-mvvm-design/"},"url":"https://blog.by-softcorp.com/posts/apply-mvvm-design/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -725,7 +725,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="3634 words"
+  title="3617 words"
 >
   <em>20 min</em> read</span>
 
@@ -736,9 +736,7 @@
   </header>
 
   <div class="content">
-    <h1 id="신입-프론트엔드-개발자의-mvvm-패턴-적용기">신입 프론트엔드 개발자의 MVVM 패턴 적용기</h1>
-
-<p><code class="language-plaintext highlighter-rouge">MVVM</code> 패턴은 디자인 패턴의 한 종류로, Model, View, ViewModel을 사용해 UI 관련 로직과 비즈니스 로직을 명확하게 분리합니다. 취업을 준비하던 시기에 진행했던 토이 프로젝트는 규모가 작아 이러한 패턴을 적용할 필요성을 느끼지 못했습니다. 그러나 프론트엔드 개발자로 일을 시작하고 사용자들이 사용할 실제 서비스를 제작하며, 코드의 유지보수성과 재사용성을 높이기 위해 MVVM 패턴을 적용해보는게 좋을것 같다는 코드리뷰 피드백을 받게 되었습니다. 신입 프론트엔드 개발자로써 한번도 써보지 않았던 MVVM 패턴을 어떻게 코드에 적용했는지, 또 리팩토링을 진행하며 어떤 부분을 고민했었는지 글을 통해 나눠보고자 합니다.</p>
+    <p><code class="language-plaintext highlighter-rouge">MVVM</code> 패턴은 디자인 패턴의 한 종류로, Model, View, ViewModel을 사용해 UI 관련 로직과 비즈니스 로직을 명확하게 분리합니다. 취업을 준비하던 시기에 진행했던 토이 프로젝트는 규모가 작아 이러한 패턴을 적용할 필요성을 느끼지 못했습니다. 그러나 프론트엔드 개발자로 일을 시작하고 사용자들이 사용할 실제 서비스를 제작하며, 코드의 유지보수성과 재사용성을 높이기 위해 MVVM 패턴을 적용해보는게 좋을것 같다는 코드리뷰 피드백을 받게 되었습니다. 신입 프론트엔드 개발자로써 한번도 써보지 않았던 MVVM 패턴을 어떻게 코드에 적용했는지, 또 리팩토링을 진행하며 어떤 부분을 고민했었는지 글을 통해 나눠보고자 합니다.</p>
 
 <h2 id="리팩토링-과정"><span class="me-2">리팩토링 과정</span><a href="#리팩토링-과정" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
