@@ -4,7 +4,7 @@
   <id>https://blog.by-softcorp.com/</id>
   <title>BY Soft Tech Insights</title>
   <subtitle>BY-Soft의 기술 블로그는 코드의 힘을 통해 미래를 만들어가는 여정에서 우리가 직면한 도전과 성공의 순간들을 공유합니다. 여기에서는 현실 세계의 다양한 개발 과제들에 대한 해결책과 우리만의 기술적인 접근법을 자세하게 살펴볼 수 있습니다. 우리는 지식을 공유하고 협업을 통해 더 나은 개발자, 더 혁신적인 솔루션을 만들어가는 과정을 여러분과 함께 나누고자 합니다.</subtitle>
-  <updated>2024-03-29T18:04:34+09:00</updated>
+  <updated>2024-04-26T10:58:20+09:00</updated>
   <author>
     <name>BY-Soft</name>
     <uri>https://blog.by-softcorp.com/</uri>
@@ -17,6 +17,46 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>공통 기능을 가진 ViewModel 만들어 재사용하기</title>
+    <link href="https://blog.by-softcorp.com/posts/reuse-viewmodel/" rel="alternate" type="text/html" title="공통 기능을 가진 ViewModel 만들어 재사용하기" />
+    <published>2024-04-26T10:16:00+09:00</published>
+  
+    <updated>2024-04-26T10:16:00+09:00</updated>
+  
+    <id>https://blog.by-softcorp.com/posts/reuse-viewmodel/</id>
+    <content src="https://blog.by-softcorp.com/posts/reuse-viewmodel/" />
+    <author>
+      <name>jessie.han</name>
+    </author>
+
+  
+    
+    <category term="typescript" />
+    
+    <category term="react" />
+    
+    <category term="frontend" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      이전 블로그 글에서 MVVM 패턴을 적용했던 과정에 대해 남겨보았습니다. 그 이후로도 저는 여러가지 ViewModel과 Model을 구현해보았는데요, 매일 마주하는 코드인데도 불구하고 고쳐야 할 점이 매번 새롭게 보이고 있습니다. 쉽지 않은 내용인 만큼 아직도 MVVM 패턴에 익숙해지는 중인 것 같습니다. 최근 한달동안 가장 많이 고민 했던 내용이 MVVM이었던 터라 이번 글도 MVVM과 관련된 내용이지만, 오늘은 저번보다 조금! 더 발전한 내용을 가지고 와보았습니다.
+
+처음 MVVM 패턴을 적용하면서는 “이렇게 작성하면 이런저런 부분에서 재사용이 가능하겠구나!” 하는 대략적인 생각을 했고, 몇가지의 ViewModel과 Model을 더 만들어보며 비슷하게 생긴 컴포넌트들에 ViewModel을 재사용 해...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
