@@ -4,7 +4,7 @@
   <id>https://blog.by-softcorp.com/</id>
   <title>BY Soft Tech Insights</title>
   <subtitle>BY-Soft의 기술 블로그는 코드의 힘을 통해 미래를 만들어가는 여정에서 우리가 직면한 도전과 성공의 순간들을 공유합니다. 여기에서는 현실 세계의 다양한 개발 과제들에 대한 해결책과 우리만의 기술적인 접근법을 자세하게 살펴볼 수 있습니다. 우리는 지식을 공유하고 협업을 통해 더 나은 개발자, 더 혁신적인 솔루션을 만들어가는 과정을 여러분과 함께 나누고자 합니다.</subtitle>
-  <updated>2024-04-26T11:21:24+09:00</updated>
+  <updated>2024-05-08T10:50:16+09:00</updated>
   <author>
     <name>BY-Soft</name>
     <uri>https://blog.by-softcorp.com/</uri>
@@ -17,6 +17,44 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>ViewModel과 Model 유닛 테스트하기</title>
+    <link href="https://blog.by-softcorp.com/posts/react-unit-test/" rel="alternate" type="text/html" title="ViewModel과 Model 유닛 테스트하기" />
+    <published>2024-05-08T10:38:00+09:00</published>
+  
+    <updated>2024-05-08T10:38:00+09:00</updated>
+  
+    <id>https://blog.by-softcorp.com/posts/react-unit-test/</id>
+    <content src="https://blog.by-softcorp.com/posts/react-unit-test/" />
+    <author>
+      <name>jessie.han</name>
+    </author>
+
+  
+    
+    <category term="typescript" />
+    
+    <category term="react" />
+    
+    <category term="frontend" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      유닛 테스트란 어떤 단위의 모듈이 의도한 대로 동작하는지 확인하기 위한 과정입니다. 테스트 대상 단위가 정확하게 정해져있는 것은 아니지만, 이 단위의 크기를 작게 만들수록 테스트 코드를 작성하기가 쉽습니다. 데이터를 가져오는 로직과 그 데이터를 가공하는 로직, 그리고 가공한 데이터를 화면에 출력하는 로직이 하나의 컴포넌트에 전부 들어가있다고 생각해봅시다. 이 경우, 컴포넌트가 리턴하는 UI는 테스트해볼 수 있다고 하더라도, 컴포넌트 안에 얽혀있는 모든 함수들을 하나씩 뽑아내 테스트하기는 현실적으로 어렵습니다. 이러한 관점에서 MVVM 패턴은 유닛테스트를 진행하기 정말 좋은 패턴입니다. 모든 로직을 관리하던 컴포넌트에서 비즈니스 로직만을 따로 떼어내 함수 또는 클래스로 분리한 것이라고 보면 됩니다. 하나...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -202,50 +240,6 @@ class Shape(Enum):
 &amp;gt;&amp;gt;&amp;gt; Shape.SQUARE
 &amp;lt;Shape.SQUARE: 2&amp;gt;
 &amp;gt;&amp;gt;&amp;gt; Shape.ALIAS_FO...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>FastAPI 유효성 검사</title>
-    <link href="https://blog.by-softcorp.com/posts/fast-api-validator/" rel="alternate" type="text/html" title="FastAPI 유효성 검사" />
-    <published>2022-04-25T09:00:00+09:00</published>
-  
-    <updated>2022-04-25T09:00:00+09:00</updated>
-  
-    <id>https://blog.by-softcorp.com/posts/fast-api-validator/</id>
-    <content src="https://blog.by-softcorp.com/posts/fast-api-validator/" />
-    <author>
-      <name>alex.kim</name>
-    </author>
-
-  
-    
-    <category term="python" />
-    
-    <category term="backend" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      Request Body Validate
-
-API 요청을 받으면 최소한으로 수행해야 하는 유효성 검사가 있습니다. 보안의 가장 기본인 SQL Injection 공격 이외에도 전달받은 데이터가 필요로 하는 최소한의 규칙 등이 있습니다.
-password를 예로 들자면 대소문자, 숫자, 특수문자를 포함해 최소 8에서 최대 20자리까지의 텍스트를 만족한다던가 혹은 전화번호는 숫자와 +- 등으로만 구성이 되어있는지 판단할 경우가 생기기 마련이죠.
-FastAPI 에서는 pydantic 이라는 Opensource 를 통해서 검증할 수가 있습니다.
-
-BaseModel
-
-pydantic 에서 제공하는 BaseModel과 Field를 이용하면 기본적인 유효성 검증을 손쉽게 처리할 수 있으며, 직접 유효성 검증을 하는 코드...
     </summary>
   
 
